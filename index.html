@@ -81,7 +81,6 @@
       margin: auto;
     }
 
-
     /* =====================================
        HEADER
     ====================================== */
@@ -160,7 +159,6 @@
       background: var(--red);
     }
 
-
     /* =====================================
        PAGE
     ====================================== */
@@ -168,7 +166,6 @@
     .page {
       padding: 40px 0 80px;
     }
-
 
     /* =====================================
        HERO
@@ -287,9 +284,9 @@
       color: var(--red);
     }
 
-    .hero p {
+    .hero-description {
       width: 100%;
-      max-width: none;
+      max-width: 1100px;
 
       margin: 0;
 
@@ -298,7 +295,7 @@
       font-size: 17px;
       line-height: 1.75;
 
-      white-space: nowrap;
+      white-space: normal;
     }
 
     .hero-line {
@@ -316,7 +313,6 @@
           rgba(244,49,49,.20)
         );
     }
-
 
     /* =====================================
        HERO IMAGE
@@ -351,8 +347,9 @@
       aspect-ratio: 5 / 1;
 
       object-fit: cover;
-    }
 
+      object-position: center;
+    }
 
     /* =====================================
        INTRO
@@ -381,7 +378,6 @@
       box-shadow:
         0 18px 55px rgba(17,24,39,.055);
     }
-
 
     /* =====================================
        STORY
@@ -440,7 +436,6 @@
       font-size: 15px;
       line-height: 1.8;
     }
-
 
     /* =====================================
        VALUES
@@ -528,7 +523,6 @@
       font-size: 13px;
       line-height: 1.65;
     }
-
 
     /* =====================================
        FEATURE BAND
@@ -649,7 +643,6 @@
       text-transform: uppercase;
     }
 
-
     /* =====================================
        FORM SECTION
     ====================================== */
@@ -677,7 +670,6 @@
       box-shadow:
         0 18px 55px rgba(17,24,39,.055);
     }
-
 
     /* =====================================
        LEFT INFO
@@ -815,7 +807,6 @@
       font-size: 12px;
       line-height: 1.6;
     }
-
 
     /* =====================================
        FORM
@@ -1006,7 +997,6 @@
         0 22px 42px rgba(244,49,49,.26);
     }
 
-
     /* =====================================
        RESPONSIVE
     ====================================== */
@@ -1018,12 +1008,7 @@
         grid-template-columns: 1fr;
       }
 
-      .hero p {
-        white-space: normal;
-      }
-
     }
-
 
     @media(max-width:760px) {
 
@@ -1054,10 +1039,18 @@
         font-size: 42px;
       }
 
-      .hero p {
-        white-space: normal;
-
+      .hero-description {
         font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .hero-description br {
+        display: none;
+      }
+
+      .hero-image-box {
+        margin-top: 22px;
+        border-radius: 20px;
       }
 
       .hero-image-box img {
@@ -1168,8 +1161,9 @@
           </h1>
 
 
-          <p>
-            First Nutrition is an independent, private-owned organization. This unique value, combined with our entrepreneurial spirit, allows us to be quick to respond to opportunities in support of our partners.
+          <p class="hero-description">
+            First Nutrition is an independent, private-owned organization. This unique value, combined with our entrepreneurial spirit,<br>
+            allows us to be quick to respond to opportunities in support of our partners.
           </p>
 
 
@@ -1183,8 +1177,8 @@
         <div class="hero-image-box">
 
           <img
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=90"
-            alt="First Nutrition Partnership"
+            src="https://github.com/mahmoudnutritionjo-art/partnership/blob/main/partnership.png?raw=true"
+            alt="First Nutrition Strategic Partnership"
           >
 
         </div>
@@ -1592,11 +1586,6 @@
     partnershipForm.addEventListener(
       "submit",
       function(event) {
-
-        /*
-          Demo behavior only.
-          Connect to the actual backend / WordPress endpoint.
-        */
 
         event.preventDefault();
 
