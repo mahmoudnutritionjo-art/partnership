@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Partnerships | First Nutrition</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --red: #f43131;
+      --red-dark: #da2828;
+
+      --dark: #111827;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --light-muted: #9ca3af;
+
+      --line: #e8edf3;
+      --soft: #f8fafc;
+      --white: #ffffff;
+
+      --shadow:
+        0 24px 70px rgba(17,24,39,.07);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+
+      font-family: Inter, Arial, sans-serif;
+
+      color: var(--dark);
+
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(244,49,49,.055),
+          transparent 28%
+        ),
+        linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #fafbfc 100%
+        );
+    }
+
+    body,
+    input,
+    textarea,
+    select,
+    button {
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1380px, 92%);
+      margin: auto;
+    }
+
+
+    /* =====================================
+       HEADER
+    ====================================== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+
+      z-index: 100;
+
+      background: rgba(255,255,255,.95);
+
+      backdrop-filter: blur(16px);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      min-height: 78px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .logo img {
+      display: block;
+      height: 54px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+
+      gap: 28px;
+    }
+
+    .nav a {
+      position: relative;
+
+      text-decoration: none;
+
+      color: #4b5563;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: .04em;
+
+      text-transform: uppercase;
+
+      transition: .2s ease;
+    }
+
+    .nav a:hover,
+    .nav a.active {
+      color: var(--red);
+    }
+
+    .nav a.active::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+
+      bottom: -13px;
+
+      height: 2px;
+
+      border-radius: 999px;
+
+      background: var(--red);
+    }
+
+
+    /* =====================================
+       PAGE
+    ====================================== */
+
+    .page {
+      padding: 40px 0 80px;
+    }
+
+
+    /* =====================================
+       HERO
+    ====================================== */
+
+    .hero {
+      position: relative;
+
+      overflow: hidden;
+
+      margin-bottom: 26px;
+
+      padding: 44px 48px 38px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 34px;
+
+      background:
+        radial-gradient(
+          circle at 92% 4%,
+          rgba(244,49,49,.08),
+          transparent 24%
+        ),
+        #ffffff;
+
+      box-shadow: var(--shadow);
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      top: -120px;
+      right: -140px;
+
+      width: 420px;
+      height: 420px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(244,49,49,.10);
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      top: -80px;
+      right: -100px;
+
+      width: 320px;
+      height: 320px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(244,49,49,.07);
+    }
+
+    .hero-copy {
+      position: relative;
+
+      z-index: 2;
+
+      width: 100%;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-bottom: 14px;
+
+      color: var(--red);
+
+      font-size: 10px;
+      font-weight: 900;
+
+      letter-spacing: .16em;
+
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+
+      width: 34px;
+      height: 2px;
+
+      border-radius: 99px;
+
+      background: var(--red);
+    }
+
+    .hero h1 {
+      margin: 0 0 14px;
+
+      font-size:
+        clamp(44px, 5vw, 68px);
+
+      line-height: .96;
+
+      font-weight: 900;
+
+      letter-spacing: -.055em;
+    }
+
+    .hero h1 span {
+      color: var(--red);
+    }
+
+    .hero p {
+      width: 100%;
+      max-width: none;
+
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 17px;
+      line-height: 1.75;
+
+      white-space: nowrap;
+    }
+
+    .hero-line {
+      width: 62px;
+      height: 4px;
+
+      margin-top: 20px;
+
+      border-radius: 99px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--red),
+          rgba(244,49,49,.20)
+        );
+    }
+
+
+    /* =====================================
+       HERO IMAGE
+    ====================================== */
+
+    .hero-image-box {
+      position: relative;
+
+      z-index: 2;
+
+      width: 100%;
+
+      overflow: hidden;
+
+      margin-top: 30px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 26px;
+
+      background: #ffffff;
+
+      box-shadow:
+        0 18px 46px rgba(17,24,39,.08);
+    }
+
+    .hero-image-box img {
+      display: block;
+
+      width: 100%;
+
+      aspect-ratio: 5 / 1;
+
+      object-fit: cover;
+    }
+
+
+    /* =====================================
+       INTRO
+    ====================================== */
+
+    .intro-layout {
+      display: grid;
+
+      grid-template-columns:
+        minmax(330px,.75fr)
+        minmax(650px,1.55fr);
+
+      gap: 24px;
+
+      margin-bottom: 24px;
+    }
+
+    .story-card,
+    .values-card {
+      border: 1px solid var(--line);
+
+      border-radius: 32px;
+
+      background: #ffffff;
+
+      box-shadow:
+        0 18px 55px rgba(17,24,39,.055);
+    }
+
+
+    /* =====================================
+       STORY
+    ====================================== */
+
+    .story-card {
+      padding: 34px;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      margin-bottom: 14px;
+
+      color: var(--red);
+
+      font-size: 10px;
+      font-weight: 900;
+
+      letter-spacing: .15em;
+
+      text-transform: uppercase;
+    }
+
+    .section-kicker::before {
+      content: "";
+
+      width: 32px;
+      height: 2px;
+
+      border-radius: 99px;
+
+      background: var(--red);
+    }
+
+    .section-title {
+      margin: 0 0 16px;
+
+      font-size: 34px;
+      line-height: 1;
+
+      font-weight: 900;
+
+      letter-spacing: -.045em;
+    }
+
+    .section-text {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+
+    /* =====================================
+       VALUES
+    ====================================== */
+
+    .values-card {
+      padding: 22px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2,1fr);
+
+      gap: 14px;
+    }
+
+    .value-item {
+      padding: 22px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 24px;
+
+      background: #ffffff;
+
+      transition: .22s ease;
+    }
+
+    .value-item:hover {
+      transform: translateY(-3px);
+
+      border-color:
+        rgba(244,49,49,.26);
+
+      box-shadow:
+        0 16px 36px rgba(17,24,39,.055);
+    }
+
+    .value-icon {
+      width: 48px;
+      height: 48px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 16px;
+
+      border-radius: 15px;
+
+      background:
+        rgba(244,49,49,.08);
+
+      color: var(--red);
+    }
+
+    .value-icon svg {
+      width: 23px;
+      height: 23px;
+
+      fill: none;
+
+      stroke: currentColor;
+
+      stroke-width: 1.9;
+
+      stroke-linecap: round;
+
+      stroke-linejoin: round;
+    }
+
+    .value-item h3 {
+      margin: 0 0 8px;
+
+      font-size: 17px;
+
+      font-weight: 900;
+    }
+
+    .value-item p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+
+    /* =====================================
+       FEATURE BAND
+    ====================================== */
+
+    .growth-band {
+      position: relative;
+
+      overflow: hidden;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0,1fr)
+        auto;
+
+      align-items: center;
+
+      gap: 28px;
+
+      margin-bottom: 24px;
+
+      padding: 38px 42px;
+
+      border: 1px solid
+        rgba(244,49,49,.14);
+
+      border-radius: 32px;
+
+      background:
+        linear-gradient(
+          110deg,
+          #fff7f7,
+          #ffffff
+        );
+
+      box-shadow:
+        0 18px 55px rgba(17,24,39,.045);
+    }
+
+    .growth-band::after {
+      content: "";
+
+      position: absolute;
+
+      right: -90px;
+      top: -110px;
+
+      width: 300px;
+      height: 300px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(244,49,49,.12);
+    }
+
+    .growth-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .growth-band h2 {
+      margin: 0 0 10px;
+
+      font-size: 31px;
+
+      font-weight: 900;
+
+      letter-spacing: -.04em;
+    }
+
+    .growth-band p {
+      max-width: 800px;
+
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .growth-mark {
+      position: relative;
+      z-index: 2;
+
+      min-width: 180px;
+
+      text-align: right;
+    }
+
+    .growth-mark strong {
+      display: block;
+
+      color: var(--red);
+
+      font-size: 40px;
+      line-height: 1;
+
+      font-weight: 900;
+
+      letter-spacing: -.04em;
+    }
+
+    .growth-mark span {
+      display: block;
+
+      margin-top: 7px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 900;
+
+      letter-spacing: .12em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =====================================
+       FORM SECTION
+    ====================================== */
+
+    .partnership-layout {
+      display: grid;
+
+      grid-template-columns:
+        minmax(330px,.78fr)
+        minmax(620px,1.72fr);
+
+      gap: 24px;
+
+      align-items: stretch;
+    }
+
+    .partnership-info,
+    .form-card {
+      border: 1px solid var(--line);
+
+      border-radius: 32px;
+
+      background: #ffffff;
+
+      box-shadow:
+        0 18px 55px rgba(17,24,39,.055);
+    }
+
+
+    /* =====================================
+       LEFT INFO
+    ====================================== */
+
+    .partnership-info {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 34px;
+    }
+
+    .partnership-info::after {
+      content: "";
+
+      position: absolute;
+
+      left: -90px;
+      bottom: -110px;
+
+      width: 230px;
+      height: 230px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(244,49,49,.08),
+          transparent 68%
+        );
+    }
+
+    .info-title {
+      margin: 0;
+
+      font-size: 29px;
+      line-height: 1;
+
+      font-weight: 900;
+
+      letter-spacing: -.04em;
+    }
+
+    .title-line {
+      width: 42px;
+      height: 3px;
+
+      margin-top: 13px;
+
+      border-radius: 99px;
+
+      background: var(--red);
+    }
+
+    .info-text {
+      margin: 16px 0 24px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .info-list {
+      position: relative;
+
+      z-index: 2;
+
+      display: grid;
+    }
+
+    .info-item {
+      display: grid;
+
+      grid-template-columns:
+        52px 1fr;
+
+      gap: 14px;
+
+      align-items: center;
+
+      padding: 18px 0;
+
+      border-bottom:
+        1px solid var(--line);
+    }
+
+    .info-icon {
+      width: 52px;
+      height: 52px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 16px;
+
+      background:
+        rgba(244,49,49,.07);
+
+      color: var(--red);
+    }
+
+    .info-icon svg {
+      width: 22px;
+      height: 22px;
+
+      fill: none;
+
+      stroke: currentColor;
+
+      stroke-width: 1.9;
+
+      stroke-linecap: round;
+
+      stroke-linejoin: round;
+    }
+
+    .info-item h3 {
+      margin: 0 0 5px;
+
+      font-size: 15px;
+
+      font-weight: 900;
+    }
+
+    .info-item p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+
+    /* =====================================
+       FORM
+    ====================================== */
+
+    .form-card {
+      padding: 36px;
+    }
+
+    .form-head {
+      margin-bottom: 28px;
+    }
+
+    .form-title {
+      margin: 0;
+
+      font-size: 30px;
+      line-height: 1;
+
+      font-weight: 900;
+
+      letter-spacing: -.04em;
+    }
+
+    .form-subtitle {
+      margin: 10px 0 0;
+
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .form-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2,1fr);
+
+      gap: 18px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      display: block;
+
+      margin:
+        0 0 8px 10px;
+
+      color: #7b8493;
+
+      font-size: 9px;
+      font-weight: 900;
+
+      letter-spacing: .13em;
+
+      text-transform: uppercase;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+
+      border:
+        1.5px solid var(--line);
+
+      outline: none;
+
+      background: #ffffff;
+
+      color: var(--dark);
+
+      transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+    }
+
+    input,
+    select {
+      height: 62px;
+
+      padding: 0 18px;
+
+      border-radius: 18px;
+    }
+
+    textarea {
+      min-height: 175px;
+
+      padding: 18px;
+
+      resize: vertical;
+
+      border-radius: 20px;
+
+      line-height: 1.7;
+    }
+
+    select {
+      appearance: none;
+
+      cursor: pointer;
+
+      background-image:
+        linear-gradient(
+          45deg,
+          transparent 50%,
+          #8b95a5 50%
+        ),
+        linear-gradient(
+          135deg,
+          #8b95a5 50%,
+          transparent 50%
+        );
+
+      background-position:
+        calc(100% - 22px) 27px,
+        calc(100% - 17px) 27px;
+
+      background-size:
+        5px 5px,
+        5px 5px;
+
+      background-repeat: no-repeat;
+
+      padding-right: 45px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #b8c0cc;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color:
+        rgba(244,49,49,.55);
+
+      box-shadow:
+        0 0 0 4px
+        rgba(244,49,49,.07);
+    }
+
+    .submit-row {
+      margin-top: 22px;
+    }
+
+    .submit-btn {
+      width: 100%;
+
+      min-height: 62px;
+
+      border: none;
+
+      border-radius: 17px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--red-dark),
+          var(--red)
+        );
+
+      color: #ffffff;
+
+      font-size: 13px;
+      font-weight: 900;
+
+      letter-spacing: .06em;
+
+      text-transform: uppercase;
+
+      box-shadow:
+        0 18px 34px rgba(244,49,49,.20);
+
+      transition: .22s ease;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 22px 42px rgba(244,49,49,.26);
+    }
+
+
+    /* =====================================
+       RESPONSIVE
+    ====================================== */
+
+    @media(max-width:1100px) {
+
+      .intro-layout,
+      .partnership-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero p {
+        white-space: normal;
+      }
+
+    }
+
+
+    @media(max-width:760px) {
+
+      .container {
+        width:
+          min(100% - 28px,600px);
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .logo img {
+        height: 43px;
+      }
+
+      .page {
+        padding: 18px 0 48px;
+      }
+
+      .hero {
+        padding: 28px 20px 20px;
+
+        border-radius: 26px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        white-space: normal;
+
+        font-size: 14px;
+      }
+
+      .hero-image-box img {
+        aspect-ratio: 2.4 / 1;
+      }
+
+      .story-card,
+      .values-card,
+      .growth-band,
+      .partnership-info,
+      .form-card {
+        border-radius: 26px;
+      }
+
+      .story-card,
+      .partnership-info,
+      .form-card {
+        padding: 22px;
+      }
+
+      .values-card {
+        grid-template-columns: 1fr;
+      }
+
+      .growth-band {
+        grid-template-columns: 1fr;
+
+        padding: 24px;
+      }
+
+      .growth-mark {
+        text-align: left;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a href="#" class="logo">
+
+        <img
+          src="https://www.firstnutrition.com/wp-content/uploads/2026/05/firstnutritionjo-logo.webp"
+          alt="First Nutrition"
+        >
+
+      </a>
+
+
+      <nav class="nav">
+
+        <a href="#">Shop</a>
+
+        <a href="#">Categories</a>
+
+        <a href="#">Brands</a>
+
+        <a href="#">About Us</a>
+
+        <a href="#">Branches</a>
+
+        <a href="#" class="active">
+          Partnerships
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main class="page">
+
+    <div class="container">
+
+
+      <!-- HERO -->
+
+      <section class="hero">
+
+        <div class="hero-copy">
+
+          <div class="eyebrow">
+            Partnership Opportunities
+          </div>
+
+
+          <h1>
+            Your Partner of Choice for
+            <span>Growth.</span>
+          </h1>
+
+
+          <p>
+            First Nutrition is an independent, private-owned organization. This unique value, combined with our entrepreneurial spirit, allows us to be quick to respond to opportunities in support of our partners.
+          </p>
+
+
+          <div class="hero-line"></div>
+
+        </div>
+
+
+        <!-- PARTNERSHIP IMAGE -->
+
+        <div class="hero-image-box">
+
+          <img
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1800&q=90"
+            alt="First Nutrition Partnership"
+          >
+
+        </div>
+
+      </section>
+
+
+      <!-- INTRO -->
+
+      <section class="intro-layout">
+
+
+        <article class="story-card">
+
+          <div class="section-kicker">
+            Our Approach
+          </div>
+
+          <h2 class="section-title">
+            Entrepreneurial spirit & speed.
+          </h2>
+
+          <p class="section-text">
+            Those rewarding partnerships are ignited by people
+            you can count on. First Nutrition continues to look
+            for opportunities and partnerships that support
+            long-term growth.
+          </p>
+
+        </article>
+
+
+        <div class="values-card">
+
+
+          <article class="value-item">
+
+            <div class="value-icon">
+
+              <svg viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+
+            </div>
+
+            <h3>
+              Setting the Standard
+            </h3>
+
+            <p>
+              Working with customers, principal suppliers
+              and industry partners to foster achievement.
+            </p>
+
+          </article>
+
+
+          <article class="value-item">
+
+            <div class="value-icon">
+
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+
+            </div>
+
+            <h3>
+              Trusted Principals
+            </h3>
+
+            <p>
+              Helping businesses succeed through reliable,
+              long-term and trusted relationships.
+            </p>
+
+          </article>
+
+
+          <article class="value-item">
+
+            <div class="value-icon">
+
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15 15 0 0 1 0 20"/>
+              </svg>
+
+            </div>
+
+            <h3>
+              Global Reach
+            </h3>
+
+            <p>
+              Supporting opportunities across different markets,
+              sectors and sports nutrition segments.
+            </p>
+
+          </article>
+
+
+          <article class="value-item">
+
+            <div class="value-icon">
+
+              <svg viewBox="0 0 24 24">
+                <path d="M3 3v18h18"/>
+                <path d="M7 16l4-5 4 3 5-8"/>
+              </svg>
+
+            </div>
+
+            <h3>
+              Shared Growth
+            </h3>
+
+            <p>
+              Building partnerships around sustainable progress
+              and shared commercial ambition.
+            </p>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- GROWTH BAND -->
+
+      <section class="growth-band">
+
+        <div class="growth-content">
+
+          <div class="section-kicker">
+            Global Reach
+          </div>
+
+          <h2>
+            Growth built through partnership.
+          </h2>
+
+          <p>
+            Wherever your market, industry segment or sports nutrition specialty need,
+            consider First Nutrition as a partner committed to helping your business succeed.
+          </p>
+
+        </div>
+
+
+        <div class="growth-mark">
+
+          <strong>
+            Together
+          </strong>
+
+          <span>
+            Build • Grow • Succeed
+          </span>
+
+        </div>
+
+      </section>
+
+
+      <!-- PARTNERSHIP FORM -->
+
+      <section
+        id="partner-form"
+        class="partnership-layout"
+      >
+
+
+        <!-- LEFT INFO -->
+
+        <aside class="partnership-info">
+
+          <h2 class="info-title">
+            Let's Grow Together
+          </h2>
+
+          <div class="title-line"></div>
+
+          <p class="info-text">
+            Share your business information and partnership goals.
+            Tell us how you see an opportunity to cooperate with
+            First Nutrition.
+          </p>
+
+
+          <div class="info-list">
+
+
+            <div class="info-item">
+
+              <div class="info-icon">
+
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 3v18h18"/>
+                  <path d="M7 16l4-5 4 3 5-8"/>
+                </svg>
+
+              </div>
+
+              <div>
+
+                <h3>
+                  Growth Focus
+                </h3>
+
+                <p>
+                  Long-term business opportunities and shared goals.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+              <div class="info-icon">
+
+                <svg viewBox="0 0 24 24">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="8.5" cy="7" r="4"/>
+                  <path d="M20 8v6"/>
+                  <path d="M23 11h-6"/>
+                </svg>
+
+              </div>
+
+              <div>
+
+                <h3>
+                  Strategic Relationships
+                </h3>
+
+                <p>
+                  Partnerships built on trust and mutual success.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="info-item">
+
+              <div class="info-icon">
+
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M2 12h20"/>
+                </svg>
+
+              </div>
+
+              <div>
+
+                <h3>
+                  Market Opportunities
+                </h3>
+
+                <p>
+                  Exploring opportunities across relevant markets.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </aside>
+
+
+        <!-- FORM -->
+
+        <section class="form-card">
+
+          <div class="form-head">
+
+            <h2 class="form-title">
+              Partnership Request
+            </h2>
+
+            <div class="title-line"></div>
+
+            <p class="form-subtitle">
+              Complete the form below and submit your business inquiry.
+            </p>
+
+          </div>
+
+
+          <form id="partnershipForm">
+
+            <div class="form-grid">
+
+
+              <div class="field">
+
+                <label>
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="John Doe"
+                  required
+                >
+
+              </div>
+
+
+              <div class="field">
+
+                <label>
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  placeholder="john@company.com"
+                  required
+                >
+
+              </div>
+
+
+              <div class="field">
+
+                <label>
+                  Company Name
+                </label>
+
+                <input
+                  type="text"
+                  placeholder="Your Business Ltd."
+                  required
+                >
+
+              </div>
+
+
+              <div class="field">
+
+                <label>
+                  Contact Phone
+                </label>
+
+                <input
+                  type="tel"
+                  placeholder="+962..."
+                >
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  How Can We Cooperate?
+                </label>
+
+                <textarea
+                  placeholder="Describe your business and goals..."
+                  required
+                ></textarea>
+
+              </div>
+
+            </div>
+
+
+            <div class="submit-row">
+
+              <button
+                type="submit"
+                class="submit-btn"
+              >
+                Submit Request →
+              </button>
+
+            </div>
+
+          </form>
+
+        </section>
+
+      </section>
+
+    </div>
+
+  </main>
+
+
+  <script>
+    const partnershipForm =
+      document.getElementById("partnershipForm");
+
+    partnershipForm.addEventListener(
+      "submit",
+      function(event) {
+
+        /*
+          Demo behavior only.
+          Connect to the actual backend / WordPress endpoint.
+        */
+
+        event.preventDefault();
+
+        alert(
+          "Partnership request submitted."
+        );
+
+      }
+    );
+  </script>
+
+</body>
+</html>
